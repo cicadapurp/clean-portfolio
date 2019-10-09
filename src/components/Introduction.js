@@ -5,7 +5,7 @@ const Introduction = () => {
   return (
     <IntroStyle>
       <div>
-        <h3>Hello</h3>
+        <h2>Hello</h2>
         <br /> 
           My name is Tallan Groberg. I am a full stack web developer. I have a passion for solving problems and building software. Writing, and helping people.
           <br />

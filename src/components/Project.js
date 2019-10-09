@@ -33,20 +33,23 @@ const ProjectStyles = styled.div`
 text-align: center;
 
 
-  box-shadow: -1px 6px 21px -15px rgba(0,0,0,0.75);
 
+
+
+  box-shadow: 3px 0 27px -25px rgba(0,0,0,0.75);
+  transition: 0.5s;
+:hover {
+box-shadow: -1px 6px 21px -15px rgba(0,0,0,0.75);
+}
 
 div {
 padding: 5pt;
-box-shadow: 1px 2px 24px -25px rgba(0,0,0,0.75);
 width: 95%;
 height: fit-content;
 transition: 0.5s;
 }
 
-div:hover {
-  box-shadow: 3px 0 27px -25px rgba(0,0,0,0.75);
-}
+
 
 `;
 export default Project;

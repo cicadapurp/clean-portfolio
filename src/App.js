@@ -30,10 +30,28 @@ const Container = withContext(styled.div`
   font-weight: bold;
   background: #FFFFFF;
 
+  h2 {
+    font-size: 20pt;
+  }
+  h3 {
+    font-size: 17pt;
+  }
+  h4 {
+    font-size: 13pt;
+  }
+  p {
+    font-size: 10pt;
+  }
+
+
+
+
   a {
   text-decoration: none;
   color: #7c7e7f;
   transition: 0.5s;
+  font-weight: 1000;
+  font-style: italic;
 
 }
 a:hover {
