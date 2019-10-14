@@ -10,7 +10,9 @@ const Introduction = () => {
           My name is Tallan Groberg. I am a full stack web developer. I have a passion for solving problems and building software. Writing, and helping people.
           <br />
           let me show you some of the things I've done
+          <h1>Projects</h1>
       </div>
+      
     </IntroStyle>
   );
 };

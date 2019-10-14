@@ -7,7 +7,7 @@ import { withContext, } from '../providers/ThemeProvider'
 
 const Project = (props) => {
 
-  console.log('in projects: props = ', props)
+
   const {type, name, description, repo, url, contribution} = props.proj
 
   return (

@@ -4,6 +4,7 @@ import { Route, Switch, } from 'react-router-dom'
 import { withContext, } from './providers/ThemeProvider'
 import Home from './components/Home'
 import Nav from './components/Nav'
+import Contact from './components/Contact'
 import background from './images/background.jpg'
 // change the font sizes to enstill a visual hierarchy, and make the shadows more uniform on the cards use an nth-child selector to slightly change the look of the cards. 
 
@@ -12,13 +13,14 @@ const App = (props) => {
   useEffect( () => {
     setWidth(window.innerWidth)
   }, [])
-  console.log('width', width)
+
 
   return ( 
   <Container>
     {width > 1000 ? <Nav /> : null}
     <Switch>
       <Route exact path='/' render={ rProps => <Home {...rProps} />} />
+      <Route exact path='/contact' render={ rProps => <Contact {...rProps} />} />
     </Switch>
     {width < 1000 ? <Nav type="footer" /> : null}
   </Container>
