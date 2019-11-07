@@ -42,17 +42,25 @@ const Nav = (props) => {
 
 const NavStyle = styled.div`
   background: white;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 1pt;
   text-align: center;
   transition: 0.5s;
   box-shadow: -1px 6px 21px -15px rgba(0,0,0,0.75);
-  z-index: 1;
-  position: sticky;
-  bottom: 0;
-  box-shadow: -1px -6px 21px -15px rgba(0,0,0,0.75);
-  
+
+    z-index: 1;
+    position: fixed;
+    @media only screen and (max-width: 1000px) {
+      bottom: -2px;
+      
+
+    }
+    @media only screen and (min-width: 1000px) {
+      top: -2px;
+      
+    }
   a:hover {
   box-shadow: -12px 139px 108px -135px rgba(0,0,0,0.75);
     filter: invert(2%);
