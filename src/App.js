@@ -11,13 +11,13 @@ import background from './images/background.jpg'
 const App = (props) => {
   const [width, setWidth] = useState(0)
   useEffect( () => {
-    setWidth(window.innerWidth)
+    setTimeout(setWidth(window.innerWidth),50)
   }, [])
 
 
   return ( 
   <Container>
-    {width > 1000 ? <Nav /> : null}
+    { console.log('fired')}
     <Switch>
       <Route exact path='/' render={ rProps => <Home {...rProps} />} />
       <Route exact path='/contact' render={ rProps => <Contact {...rProps} />} />
@@ -63,9 +63,10 @@ a:hover {
 
 img {
   transition: 0.5s;
+  
 }
 img:hover {
-  
+  box-shadow: 3px 0 27px -25px rgba(0,0,0,0.75);
 }
 `);
 

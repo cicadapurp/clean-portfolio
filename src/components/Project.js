@@ -18,7 +18,10 @@ const Project = (props) => {
           <p>{description}</p>
             <a target="_blank" href={repo}> gitHub<img src={gitHub} width='40' /></a>
              
-            <a target="_blank" href={url}><img src={mouse} width="40" />See the site</a><p><em>Note:</em> it may take a second for server to load.</p>
+            <a target="_blank" href={url}><img src={mouse} width="40" />See the site</a>
+            {type === 'Enterprise Level' ? null 
+            : 
+            <p><em>Note:</em> it may take a second for server to load.</p>}
           <p><em>My contributions:</em> {contribution}</p>
       </div>
     </ProjectStyles>

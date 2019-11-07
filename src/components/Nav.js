@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link, } from 'react-router-dom'
 import linkedIn from '../images/linkedIn.png'
 import gitHub from '../images/github.png'
 import resume from '../images/resume.jpg'
+// import resumePDF from '../images/Resume.pdf'
 import phone from '../images/phone.png'
 import styled from 'styled-components'
 
@@ -10,21 +11,31 @@ import styled from 'styled-components'
 //make a drop down menu listing my projects
 
 const Nav = (props) => {
+  const [toggle, setToggle] = useState(true)
 
+  const toggler = () => {
+    setToggle(!toggle)
+  }
+  console.log(toggle)
 
   return (
     <NavStyle className={window.innerWidth < 1000 ? 'footer' : null} >
-      <a target="_blank" href='https://github.com/cicadapurp'>
+      <a target="_blank" href='https://github.com/TallanGroberg'>
       <img src={gitHub} width='40' />MyGitHub
       </a>
       <a target="_blank" href='https://www.linkedin.com/in/tallan-groberg'>
         <img src={linkedIn} width="40" />
       LinkedIn</a>
    
-      <a target='_blank' href='https://docs.google.com/document/d/1DGrxqni-ASYTq4iBh3xsb6n4o4kvpGXnq1nXv1GS0xc/edit?usp=sharing'>
+      <a target="_blank" href='https://docs.google.com/document/d/1PUQgY_Dp_m6HYXkwOiOgQGuT-iK4eSzQ68vY1P0zGPQ/edit?usp=sharing'  download>
         <img src={resume} width="40" />
       MyResume</a>
-     <Link to='/contact'> <img src={phone} alt="" width="40"/>Contact</Link>
+      {toggle ? 
+
+        <Link onClick={toggler} to='/contact'> <img src={phone} alt="" width="40"/>Contact</Link>
+        : 
+        <Link onClick={toggler} to='/'> <img src={phone} alt="" width="40"/>Projects</Link>
+      }
     </NavStyle>
   );
 };
