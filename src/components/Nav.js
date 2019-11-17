@@ -49,14 +49,14 @@ const NavStyle = styled.div`
   text-align: center;
   transition: 0.5s;
   box-shadow: -1px 6px 21px -15px rgba(0,0,0,0.75);
-
+  margin-left: -5pt;
     z-index: 1;
     position: fixed;
     @media only screen and (max-width: 1000px) {
-      bottom: -2px;
+      bottom: 0;
     }
     @media only screen and (min-width: 1000px) {
-      top: -2px;
+      top: 0;
       
     }
   a:hover {

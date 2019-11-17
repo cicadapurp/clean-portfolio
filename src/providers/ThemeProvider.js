@@ -58,13 +58,22 @@ class ThemeProvider extends Component {
       contribution: 'implimented all functionality',
     },
     {
-  name: 'config for react',
-  type: 'webpack',
-  description: 'a customized webpack with dependencies to compile code for production while writing React and a tutorial to help set it up. See the site for details',
-  repo: 'https://github.com/TallanGroberg/webpack-for-react',
-  url: 'https://dev.to/tallangroberg/customizing-webpack-config-to-run-react-1ji4',
-  contribution: 'implimented all features and wrote tutorial series',
-},
+      name: 'web-pack config for react',
+      type: 'Tutorial',
+      description: 'a customized webpack with dependencies to compile code for production while writing React and a tutorial to help set it up. See the site for details',
+      repo: 'https://github.com/TallanGroberg/webpack-for-react',
+      url: 'https://dev.to/tallangroberg/customizing-webpack-config-to-run-react-1ji4',
+      contribution: 'implimented all features and wrote tutorial series',
+    },
+    {
+      name: 'Stripe API tutoral',
+      type: ' Tutorial series',
+      description: 'a tutorial about how to impliment stripe API to test mode.',
+      repo: 'https://github.com/TallanGroberg/payment-system',
+      url: 'https://dev.to/tallangroberg/using-stripe-to-make-credit-card-charges-part-1-3mgd',
+      contribution: 'Implimented all features, wrote tutorial',
+    }
+
 
 
   ]

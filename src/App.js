@@ -30,6 +30,14 @@ const Container = withContext(styled.div`
   font-family: Muli;
   font-weight: bold;
   background: #FFFFFF;
+  @media only screen and (max-width: 1000px) {
+      margin-bottom: 45pt;
+    }
+    @media only screen and (min-width: 1000px) {
+      margin-top: 45pt;
+      
+    }
+
 
   h2 {
     font-size: 20pt;
@@ -43,9 +51,6 @@ const Container = withContext(styled.div`
   p {
     font-size: 10pt;
   }
-
-
-
 
   a {
   text-decoration: none;
