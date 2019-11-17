@@ -17,6 +17,14 @@ class ThemeProvider extends Component {
       url: 'https://the-stor-e.herokuapp.com',
       contribution: 'implimented all features',
     },
+    {
+      name: 'Grey Mountain Art',
+      type: 'Freelance Work',
+      description: 'A website for an artist to showcase there artwork and attract customers',
+      repo: 'https://github.com/TallanGroberg/grey-mountain-art',
+      url: 'https://greymountainart.surge.sh/',
+      contribution: 'Implimented all features with react-router-dom, styled-components, published to surge.',
+    },
       {
         name: 'Blog it up',
         type: 'Full-stack',
@@ -57,6 +65,7 @@ class ThemeProvider extends Component {
   url: 'https://dev.to/tallangroberg/customizing-webpack-config-to-run-react-1ji4',
   contribution: 'implimented all features and wrote tutorial series',
 },
+
 
   ]
 }

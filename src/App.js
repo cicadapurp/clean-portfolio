@@ -17,12 +17,11 @@ const App = (props) => {
 
   return ( 
   <Container>
-    { console.log('fired')}
+      <Nav />
     <Switch>
       <Route exact path='/' render={ rProps => <Home {...rProps} />} />
       <Route exact path='/contact' render={ rProps => <Contact {...rProps} />} />
     </Switch>
-    {width < 1000 ? <Nav type="footer" /> : null}
   </Container>
   );
 };

@@ -19,7 +19,7 @@ const Nav = (props) => {
   console.log(toggle)
 
   return (
-    <NavStyle className={window.innerWidth < 1000 ? 'footer' : null} >
+    <NavStyle>
       <a target="_blank" href='https://github.com/TallanGroberg'>
       <img src={gitHub} width='40' />MyGitHub
       </a>
@@ -27,7 +27,7 @@ const Nav = (props) => {
         <img src={linkedIn} width="40" />
       LinkedIn</a>
    
-      <a target="_blank" href='https://docs.google.com/document/d/1PUQgY_Dp_m6HYXkwOiOgQGuT-iK4eSzQ68vY1P0zGPQ/edit?usp=sharing'  download>
+      <a target="_blank" href='https://docs.google.com/document/d/1DGrxqni-ASYTq4iBh3xsb6n4o4kvpGXnq1nXv1GS0xc/edit?usp=sharing'  download>
         <img src={resume} width="40" />
       MyResume</a>
       {toggle ? 
@@ -54,8 +54,6 @@ const NavStyle = styled.div`
     position: fixed;
     @media only screen and (max-width: 1000px) {
       bottom: -2px;
-      
-
     }
     @media only screen and (min-width: 1000px) {
       top: -2px;
