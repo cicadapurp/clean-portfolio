@@ -41,14 +41,6 @@ class ThemeProvider extends Component {
       url: 'http://query-app.herokuapp.com',
       contribution: 'implimented the user authentification. designed the databases architecture, grading system and teacher side UI. the primary technologies are Ruby on Rails and reactJS.',
     },
-    {
-      name: 'National Parks Dream List',
-      type: 'Front-end',
-      description: 'users can choose a dream list of there national parks',
-      repo: 'https://github.com/TallanGroberg/rec-sites',
-      url: 'http://res-sites.herokuapp.com/',
-      contribution: 'implimented all features which includes. National Parks API intergration, react context API for state management, styled components, Axios calls, react-router-dom, react-reveal for animations, persistance of data with local storage',
-    },
     { 
       name: 'three js',
       type: 'digital art',
@@ -72,13 +64,17 @@ class ThemeProvider extends Component {
       repo: 'https://github.com/TallanGroberg/payment-system',
       url: 'https://dev.to/tallangroberg/using-stripe-to-make-credit-card-charges-part-1-3mgd',
       contribution: 'Implimented all features, wrote tutorial',
-    }
-
-
-
+    },
+    {
+      name: 'firebase image uploads',
+      type: 'tutorial',
+      description: 'technical writing to achieve image uploads with react and firebase.',
+      repo: 'https://github.com/TallanGroberg/imageupload-tutorial',
+      url: 'https://dev.to/tallangroberg/how-to-do-image-upload-with-firebase-in-react-cpj',
+      contribution: 'Wrote all technical aspects',
+    },
   ]
 }
-
 // {
 //   name: '',
 //   type: '',
@@ -86,7 +82,7 @@ class ThemeProvider extends Component {
 //   repo: '',
 //   url: '',
 //   contribution: '',
-// }
+// },
   render() {
 
     const { theme, projectObj, } = this.state
