@@ -16,7 +16,6 @@ const Nav = (props) => {
   const toggler = () => {
     setToggle(!toggle)
   }
-  console.log(toggle)
 
   return (
     <NavStyle>

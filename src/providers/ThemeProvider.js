@@ -67,7 +67,7 @@ class ThemeProvider extends Component {
     },
     {
       name: 'firebase image uploads',
-      type: 'tutorial',
+      type: 'Tutorial',
       description: 'technical writing to achieve image uploads with react and firebase.',
       repo: 'https://github.com/TallanGroberg/imageupload-tutorial',
       url: 'https://dev.to/tallangroberg/how-to-do-image-upload-with-firebase-in-react-cpj',
