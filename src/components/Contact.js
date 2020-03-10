@@ -4,6 +4,8 @@ import Axios from 'axios';
 import styled from 'styled-components'
 
 const Contact = () => {
+  const [complete, setComplete] = useState(true)
+  const [error, setError] = useState('')
   const [inputs, setInputs] = useState({
     name: '',
       email: "",
@@ -12,14 +14,18 @@ const Contact = () => {
 
         const handleSubmit = e => {
           e.preventDefault()
-            Axios.post('/feedback', {
+            Axios.post('https://the-stor-e.herokuapp.com/feedback', {
               subject: inputs.subject,
               name: inputs.name,
               email: inputs.email,
               text: inputs.text,
             })
             .then(res => {
-              console.log(res)
+              res.status === 200 && setComplete(prev => (!prev)) 
+                
+            })
+            .catch(err => {
+              setError(err.message)
             })
         }
         const handleChange = e => {
@@ -32,6 +38,7 @@ const Contact = () => {
       <h1>Tallan Groberg</h1>
       <h3>Email: tallan.taven@gmail.com</h3>
       <h4>Phone: 757-620-7310</h4>
+      {!complete ? <>
         <form onSubmit={handleSubmit}>
           <p>name</p>
           <input 
@@ -59,7 +66,18 @@ const Contact = () => {
           name="text" id="" cols="20" rows="5"></textarea>
           <ButtonStyle>submit</ButtonStyle>
           </form>
-
+          </>
+          :
+       <>
+        <p>your message was sent.</p>
+        <ButtonStyle onClick={() => setComplete(prev => (!prev))}>
+          send another message?
+          </ButtonStyle>
+          <br />
+      <Link to='/'>Back to projects</Link>
+      
+      </>}
+      {error !== '' && <p>{error}: please email me directly</p>}
     </div>
   );
 };
