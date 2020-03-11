@@ -20,16 +20,12 @@ const Project = (props) => {
   return (
     <ProjectStyles>
       <div>
-        
         <h4>{name}</h4>
-            <div className="div">
-
+            
         <ProjectStory 
           proj={props.proj}
           />
-          
-           
-          </div>
+
           
       </div>
     </ProjectStyles>
