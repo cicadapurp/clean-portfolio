@@ -94,6 +94,31 @@ img {
 img:hover {
   box-shadow: 3px 0 27px -25px rgba(0,0,0,0.75);
 }
+
+button {
+
+box-shadow:inset -2px -9px 0px -4px #ffffff;
+background-color:#ffffff;
+border-radius:6px;
+border:1px solid #dcdcdc;
+display:inline-block;
+cursor:pointer;
+color:#666666;
+font-family:Arial;
+font-size:15px;
+font-weight:bold;
+padding:2px 21px;
+text-decoration:none;
+text-shadow:0px 2px 0px #ffffff;
+}
+
+button:hover {
+background-color:#f6f6f6;
+}
+button:active {
+position:relative;
+top:1px;
+}
 `);
 
 export default withContext(App);

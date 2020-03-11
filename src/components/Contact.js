@@ -4,7 +4,7 @@ import Axios from 'axios';
 import styled from 'styled-components'
 
 const Contact = () => {
-  const [complete, setComplete] = useState(true)
+  const [complete, setComplete] = useState(false)
   const [error, setError] = useState('')
   const [inputs, setInputs] = useState({
     name: '',
@@ -64,15 +64,15 @@ const Contact = () => {
             <p>body</p>
           <textarea placeholder="enter a message and I will get back to you." value={inputs.text} onChange={handleChange} 
           name="text" id="" cols="20" rows="5"></textarea>
-          <ButtonStyle>submit</ButtonStyle>
+          <button>submit</button>
           </form>
           </>
           :
        <>
-        <p>your message was sent.</p>
-        <ButtonStyle onClick={() => setComplete(prev => (!prev))}>
+        <p>your message was sent. I will get back to you as soon as I can.</p>
+        <button onClick={() => setComplete(prev => (!prev))}>
           send another message?
-          </ButtonStyle>
+          </button>
           <br />
       <Link to='/'>Back to projects</Link>
       
@@ -83,29 +83,6 @@ const Contact = () => {
 };
 
 
-const ButtonStyle = styled.button`
- 
-	box-shadow:inset -2px -9px 0px -4px #ffffff;
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:2px 21px;
-	text-decoration:none;
-	text-shadow:0px 2px 0px #ffffff;
 
-:hover {
-	background-color:#f6f6f6;
-}
-:active {
-	position:relative;
-	top:1px;
-}
-`;
 
 export default Contact;

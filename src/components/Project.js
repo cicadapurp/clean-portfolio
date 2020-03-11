@@ -1,28 +1,36 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components'
 import gitHub from '../images/github.png'
 import mouse from '../images/mouse.png'
 import { withContext, } from '../providers/ThemeProvider'
+import ProjectStory from './ProjectStory';
 
 
 const Project = (props) => {
+  const {type, name, images,  description, repo, url, contribution} = props.proj
 
 
-  const {type, name, description, repo, url, contribution} = props.proj
+  
+
+
+
+
+
 
   return (
     <ProjectStyles>
       <div>
-        <h3><em>{type}</em></h3>
+        
         <h4>{name}</h4>
-          <p>{description}</p>
-            <a target="_blank" href={repo}> gitHub<img src={gitHub} width='40' /></a>
-             
-            <a target="_blank" href={url}><img src={mouse} width="40" />See the site</a>
-            {type === 'Enterprise Level' ? null 
-            : 
-            <p><em>Note:</em> it may take a second for server to load.</p>}
-          <p><em>My contributions:</em> {contribution}</p>
+            <div className="div">
+
+        <ProjectStory 
+          proj={props.proj}
+          />
+          
+           
+          </div>
+          
       </div>
     </ProjectStyles>
   );

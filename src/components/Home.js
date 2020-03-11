@@ -9,7 +9,7 @@ import { withContext, } from '../providers/ThemeProvider'
 // single page app with a menu to point to specific projects when clicked from the menu
 
 const Home = (props) => {
-
+  
   const {projectObj, } = props
   return (<>
     <Introduction />
