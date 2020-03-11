@@ -33,7 +33,7 @@ const ProjectStory = (props) => {
   return (
     <>
       {currentImage === -1 && <h3><em>{type}</em></h3>}
-
+        {story.length === 0 && currentImage === story.length ? <p>story comming soon, in the mean time <a target="_blank" href={url}>See the site</a> </p> : null}
         { photos.length > 0 && photos[currentImage] !== undefined ?  <>
             <img height="200" width="200" src={photos[currentImage]} />
             <p>{story[currentImage]}</p>
